@@ -3,6 +3,9 @@ class LandingController < ApplicationController
 
   end
   def new
-    @post = Post.find(params[:id])
+  end
+  def create
+    render plain: params[:post].inspect
+    #format.json { render json: params[:post].inspect }
   end
 end

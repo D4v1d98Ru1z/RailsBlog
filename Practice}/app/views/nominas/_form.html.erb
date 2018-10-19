@@ -1,0 +1,32 @@
+<%= form_with(model: nomina, local: true) do |form| %>
+  <% if nomina.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nomina.errors.count, "error") %> prohibited this nomina from being saved:</h2>
+
+      <ul>
+      <% nomina.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary %>
+    <%= form.text_field :salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.text_field :position %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

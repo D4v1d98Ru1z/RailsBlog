@@ -1,0 +1,2 @@
+class Nomina < ApplicationRecord
+end

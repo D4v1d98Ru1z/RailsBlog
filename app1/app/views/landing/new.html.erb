@@ -1,1 +1,10 @@
 <h1>About</h1>
+<%= form_tag landing_path, method => 'get' do |x| %>
+    <p>
+        <%= x.label :text %>
+        <%= x.text_field :text %>
+    </p>
+    <p>
+        <%= x.submit %>
+    </p>
+<% end %>
