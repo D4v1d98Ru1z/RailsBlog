@@ -3,5 +3,6 @@ class HomeController < ApplicationController
   end
   def new
     @npost = Home.new
+    
   end
 end
