@@ -1,0 +1,21 @@
+<div class="m-4">
+    <h1 class="text-center">New post</h1>
+
+    <%= form_for :post do |x| %>
+    <div class="form-group">
+        
+            <%= x.label :Username, for: "exampleInputEmail1" %><br>
+            <%= x.text_field :body, placeholder: "Enter your username", class: "pl-2 form-control", id: "exampleInputEmail1" %>
+            <%= x.label :Title, for: "exampleInputEmail1" %><br>
+            <%= x.text_field :body, placeholder: "Enter your post title", class: "pl-2 form-control", id: "exampleInputEmail1" %>
+
+            <%= x.label :Description, for: "exampleInputEmail1", class: "mt-3" %><br>
+            <%= x.text_area :body, placeholder: "Enter the description", class: "pl-2 form-control ", id: "exampleFormControlTextarea1" %>
+            <%= x.label :Article, for: "exampleInputEmail1", class: "mt-3" %><br>
+            <%= x.text_area :body, placeholder: "Enter the complete post", class: "pl-2 form-control ", id: "exampleFormControlTextarea1" %>
+            <%= x.submit 'Public the post', :class => "btn btn-primary mt-4" %>
+        
+    </div>
+    <% end %>
+
+</div>
